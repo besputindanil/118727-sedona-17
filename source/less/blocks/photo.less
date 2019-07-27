@@ -1,5 +1,17 @@
 .photo {
+  width: 280px;
+  margin: 0 auto;
+
   line-height: 24px;
+}
+
+.photo__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .photo__title,
@@ -10,4 +22,20 @@
 
 .photo__author {
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    width: 648px;
+  }
+
+  .photo__list {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    width: 1200px;
+  }
 }
