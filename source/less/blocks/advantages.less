@@ -1,3 +1,8 @@
+.advantages {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .advantages__slogan {
   font-size: 18px;
   line-height: 26px;
@@ -18,6 +23,10 @@
 
     background-color: #81b3d2;
   }
+
+  &--short {
+    background-color: #eeeeee;
+  }
 }
 
 .advantages__title {
@@ -29,4 +38,20 @@
 
 .advantages__title--white {
   color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: 768px;
+  }
+
+  .advantages__wrapper {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: 1200px;
+  }
 }

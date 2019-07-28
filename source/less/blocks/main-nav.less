@@ -1,13 +1,28 @@
-.site-list {
-  font-size: 18px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #ffffff;
-
-  list-style: none;
-  background-color: #81b3d2;
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
 }
 
-.site-list__item a {
-  color: #ffffff;
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    flex-direction: row;
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }

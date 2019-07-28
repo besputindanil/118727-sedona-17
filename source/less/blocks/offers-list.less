@@ -1,4 +1,7 @@
 .offers-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -7,4 +10,10 @@
   line-height: 26px;
   color: #000000;
   font-weight: bold;
+}
+
+@media (min-width: @tablet-width) {
+  .offers-list {
+    display: flex;
+  }
 }
