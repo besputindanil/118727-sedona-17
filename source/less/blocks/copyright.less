@@ -1,5 +1,46 @@
+.copyright {
+  display: flex;
+}
+
 .copyright__text {
+  padding-top: 3px;
+  padding-right: 10px;
+
   font-size: 14px;
   line-height: 26px;
+  font-weight: normal;
   color: #000000;
+}
+
+.copyright__link {
+  &:hover .copyright__icon {
+    path {
+      fill: #81b3d2;
+    }
+  }
+
+  &:active .copyright__icon {
+    opacity: 0.3;
+
+    path {
+      fill: #000000;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  .copyright__text {
+    padding-right: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    margin-top: 8px;
+  }
 }
