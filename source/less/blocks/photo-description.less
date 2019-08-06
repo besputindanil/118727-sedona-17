@@ -1,9 +1,13 @@
 .photo-description {
-  width: 280px;
-  margin: 0 auto;
+  padding: 38px 20px 27px;
+
+  text-align: center;
 }
 
 .photo-description__title {
+  margin: 0;
+  margin-bottom: 27px;
+
   font-size: 18px;
   line-height: 26px;
   color: #000000;
@@ -11,17 +15,25 @@
 }
 
 .photo-description__text {
+  margin: 0;
+
   line-height: 24px;
 }
 
 @media (min-width: @tablet-width) {
   .photo-description {
-    width: 648px;
+    padding: 72px 165px 68px;
+  }
+
+  .photo-description__title {
+    margin-bottom: 31px;
+
+    font-size: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .photo-description {
-    width: 1200px;
+    padding: 110px 385px 68px;
   }
 }

@@ -1,6 +1,5 @@
 .photo {
-  width: 280px;
-  margin: 0 auto;
+  margin: 0 20px;
 
   line-height: 24px;
 }
@@ -8,34 +7,161 @@
 .photo__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.photo__item {
+  padding-top: 22px;
+  padding-bottom: 18px;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.photo__picture {
+  height: 280px;
+  margin: 0;
+}
+
+.photo__info {
+  padding-top: 15px;
+}
+
+.photo__title {
+  margin: 0;
+}
+
 .photo__title,
-.photo__number-likes {
+.photo__likes-number {
+  font-size: 14px;
+  line-height: 24px;
   font-weight: bold;
   color: #000000;
 }
 
 .photo__author {
+  margin: 0;
+  margin-bottom: 7px;
+
   text-transform: none;
+}
+
+.photo__likes {
+  position: relative;
+
+  padding-left: 36px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+
+    width: 22px;
+    height: 20px;
+
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .photo {
-    width: 648px;
+    margin: 0 60px;
   }
 
   .photo__list {
     flex-direction: row;
   }
+
+  .photo__item {
+    width: 324px;
+    padding-top: 0;
+    padding-bottom: 17px;
+
+    border-top: none;
+
+    &--wide {
+      width: 648px;
+    }
+  }
+
+  .photo__picture {
+    height: 267px;
+
+    &--sunset {
+      height: 400px;
+    }
+  }
+
+  .photo__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo__text {
+    width: 210px;
+    padding-left: 20px;
+  }
+
+  .photo__author {
+    margin-bottom: 0;
+  }
+
+  .photo__likes {
+    width: 53px;
+    margin-top: 14px;
+
+    &::before {
+      bottom: 15px;
+      left: 5px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .photo {
-    width: 1200px;
+    margin: 0;
+  }
+
+  .photo__picture {
+    margin: 0;
+  }
+
+  .photo__item {
+    position: relative;
+
+    width: 400px;
+    padding: 0;
+
+    &--wide {
+      width: 1200px;
+    }
+  }
+
+  .photo__info {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    min-height: 61px;
+    padding-top: 15px;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photo__title,
+  .photo__author,
+  .photo__likes-number {
+    color: #ffffff;
+  }
+
+  .photo__likes::before {
+    bottom: 28px;
   }
 }
