@@ -12,9 +12,35 @@
 
   padding: 11px 0 17px 50px;
 
-  &--food {
+  &--burger {
     order: 1;
   }
+}
+
+.offers-list__item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 39px;
+  height: 39px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offers-list__item--house::before {
+  background-image: url("../img/icon-house.svg");
+}
+
+.offers-list__item--burger::before {
+  background-image: url("../img/icon-burger.svg");
+}
+
+.offers-list__item--gift::before {
+  background-image: url("../img/icon-gift.svg");
 }
 
 .offers-list__title {
@@ -40,13 +66,21 @@
 
   .offers-list__item {
     width: 162px;
-    padding: 132px 47px 63px;;
+    padding: 132px 47px 63px;
 
     text-align: center;
 
-    &--food {
+    &--burger {
       order: 0;
     }
+  }
+
+  .offers-list__item::before {
+    top: 35px;
+    left: 90px;
+
+    width: 75px;
+    height: 75px;
   }
 
   .offers-list__title {
@@ -62,5 +96,10 @@
     padding: 133px 55px 83px;
 
     text-align: center;
+  }
+
+  .offers-list__item::before {
+    top: 35px;
+    left: 163px;
   }
 }
