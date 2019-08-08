@@ -1,0 +1,78 @@
+.page_header__logo {
+  height: 55px;
+
+  text-align: center;
+}
+
+.page-header__logo-image {
+  width: 102px;
+  height: 83px;
+}
+
+.intro-image {
+  min-height: 389px;
+
+  text-align: center;
+
+  background-color: #617173;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &--inner-page {
+    min-height: 158px;
+  }
+}
+
+.intro-image__text {
+  width: 280px;
+  margin-top: 90px;
+
+  &--small {
+    width: 229px;
+    margin-top: 52px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page_header__logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    margin-left: -51px;
+  }
+
+  .intro-image {
+    min-height: 517px;
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+
+    &--inner-page {
+      min-height: 291px;
+    }
+  }
+
+  .intro-image__text {
+    width: 460px;
+    margin-top: 77px;
+
+    &--small {
+      margin-top: 95px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro-image {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+
+    &--inner-page {
+      min-height: 301px;
+    }
+  }
+
+  .intro-image__text--small {
+    margin-top: 101px;
+  }
+}

@@ -1,19 +1,105 @@
 .offers-list {
-  margin: 0;
-  padding: 0;
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 26px 0 24px;
+  padding: 0 20px;
   list-style: none;
 }
 
+.offers-list__item {
+  position: relative;
+
+  padding: 11px 0 17px 50px;
+
+  &--burger {
+    order: 1;
+  }
+}
+
+.offers-list__item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 39px;
+  height: 39px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.offers-list__item--house::before {
+  background-image: url("../img/icon-house.svg");
+}
+
+.offers-list__item--burger::before {
+  background-image: url("../img/icon-burger.svg");
+}
+
+.offers-list__item--gift::before {
+  background-image: url("../img/icon-gift.svg");
+}
+
 .offers-list__title {
+  display: block;
+  margin-bottom: 13px;
+
   font-size: 18px;
   line-height: 26px;
   color: #000000;
   font-weight: bold;
 }
 
+.offers-list__description {
+  margin: 0;
+}
+
 @media (min-width: @tablet-width) {
   .offers-list {
-    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .offers-list__item {
+    width: 162px;
+    padding: 132px 47px 63px;
+
+    text-align: center;
+
+    &--burger {
+      order: 0;
+    }
+  }
+
+  .offers-list__item::before {
+    top: 35px;
+    left: 90px;
+
+    width: 75px;
+    height: 75px;
+  }
+
+  .offers-list__title {
+    margin-bottom: 22px;
+
+    font-size: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offers-list__item {
+    width: 290px;
+    padding: 133px 55px 83px;
+
+    text-align: center;
+  }
+
+  .offers-list__item::before {
+    top: 35px;
+    left: 163px;
   }
 }
