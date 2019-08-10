@@ -25,15 +25,18 @@
               <a href="#">HTML Academy</a>
             </li>
           </ul>
-          <div class="page_header__logo">
+          <div class="page-header__logo">
             <a href="index.html" class="page-header__link">
-              <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона">
             </a>
           </div>
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </nav>
-        <div class="intro-image">
-          <img class="intro-image__text" src="img/text-sedona-index.svg" width="460" height="350" alt="Седона">
+        <div class="intro-image intro-image--inner-page">
+          <img class="intro-image__text intro-image__text--small" src="img/text-sedona.svg" width="460" height="80" alt="Седона">
         </div>
       </header>
 
