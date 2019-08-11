@@ -53,21 +53,19 @@
   position: relative;
 
   padding-left: 36px;
+}
 
-  &::before {
-    content: "";
+.photo__icon {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
 
-    position: absolute;
-    bottom: 5px;
-    left: 0;
+  width: 22px;
+  height: 20px;
 
-    width: 22px;
-    height: 20px;
+  opacity: 0.3;
 
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+  fill: #000000;
 }
 
 @media (min-width: @tablet-width) {
@@ -116,11 +114,11 @@
   .photo__likes {
     width: 53px;
     margin-top: 14px;
+  }
 
-    &::before {
-      bottom: 15px;
-      left: 5px;
-    }
+  .photo__icon {
+    bottom: 15px;
+    left: 5px;
   }
 }
 
@@ -161,7 +159,11 @@
     color: #ffffff;
   }
 
-  .photo__likes::before {
+  .photo__icon {
     bottom: 28px;
+
+    opacity: 1;
+
+    fill: #ffffff;
   }
 }
