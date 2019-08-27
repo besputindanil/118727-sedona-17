@@ -46,7 +46,128 @@
       </header>
 
       <main class="page-main">
+        <section class="feedback">
 
+          <h1 class="visually-hidden">Отзыв о нас</h1>
+
+          <div class="feedback__header">
+            <b class="feedback__slogan">Оставьте свой отзыв</b>
+            <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="feedback__block-wrapper">
+              <fieldset class="feedback__block">
+                <legend class="feedback__block-title">Представьтесь:</legend>
+                <div class="user-name">
+                  <div class="user-name__item">
+                    <label class="user-name__title" for="name">Имя*:</label>
+                    <input class="user-name__text" type="text" id="name" placeholder="Петр" required>
+                  </div>
+                  <div class="user-name__item">
+                    <label class="user-name__title" for="surname">Фамилия*:</label>
+                    <input class="user-name__text" type="text" id="surname" placeholder="Иванов" required>
+                  </div>
+                  <div class="user-name__item">
+                    <label class="user-name__title" for="patronymic">Отчество:</label>
+                    <input class="user-name__text" type="text" id="patronymic" placeholder="Александрович">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="feedback__block-wrapper">
+              <fieldset class="feedback__block">
+                <legend class="feedback__block-title">Контактная информация:</legend>
+                <div class="user-contacts">
+                  <div class="user-contacts__item">
+                    <label class="user-contacts__title" for="phone">Контактный телефон*:</label>
+                    <div class="user-contacts__text-wrapper user-contacts__text-wrapper--phone">
+                      <input class="user-contacts__text" type="tel" id="phone" placeholder="Введите телефон" required>
+                    </div>
+                  </div>
+                  <div class="user-contacts__item">
+                    <label class="user-contacts__title" for="mail">Электронная почта*:</label>
+                    <div class="user-contacts__text-wrapper user-contacts__text-wrapper--email">
+                      <input class="user-contacts__text" type="email" id="mail" placeholder="Введите e-mail" required>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="feedback__block-wrapper">
+              <fieldset class="feedback__block">
+                <legend class="feedback__block-title">Ваше общее впечатление:</legend>
+                <ul class="user-impressions">
+                  <li>
+                    <label class="user-impressions__radio">
+                      <input type="radio" name="impression" class="user-impressions__input" checked>
+                      <span class="user-impressions__radio-indicator"></span>
+                      Скорее положительное
+                    </label>
+                  </li>
+                  <li>
+                    <label class="user-impressions__radio">
+                      <input type="radio" name="impression" class="user-impressions__input">
+                      <span class="user-impressions__radio-indicator"></span>
+                      Скорее отрицательное
+                    </label>
+                  </li>
+                  <li>
+                    <label class="user-impressions__radio">
+                      <input type="radio" name="impression" class="user-impressions__input">
+                      <span class="user-impressions__radio-indicator"></span>
+                      Затрудняюсь ответить
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="feedback__block-wrapper">
+              <fieldset class="feedback__block">
+                <legend class="feedback__block-title">Посещенные достопримечательности</legend>
+                <ul class="user-visits">
+                  <li>
+                    <label class="user-visits__checkbox">
+                      <input type="checkbox" class="user-visits__input" checked>
+                      <span class="user-visits__checkbox-indicator"></span>
+                      Мост дьявола
+                    </label>
+                  </li>
+                  <li>
+                    <label class="user-visits__checkbox">
+                      <input type="checkbox" class="user-visits__input" checked>
+                      <span class="user-visits__checkbox-indicator"></span>
+                      Гора-колокол
+                    </label>
+                  </li>
+                  <li>
+                    <label class="user-visits__checkbox">
+                      <input type="checkbox" class="user-visits__input" checked>
+                      <span class="user-visits__checkbox-indicator"></span>
+                      Слайд-парк
+                    </label>
+                  </li>
+                  <li>
+                    <label class="user-visits__checkbox">
+                      <input type="checkbox" class="user-visits__input">
+                      <span class="user-visits__checkbox-indicator"></span>
+                      Красные скалы
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="feedback__block-wrapper">
+              <fieldset class="feedback__block">
+                <legend class="feedback__block-title">Опишите свои эмоции</legend>
+                <textarea class="user-emotions__text" rows="5" cols="80" placeholder="Опишите подробно все свои восторги "></textarea>
+              </fieldset>
+            </div>
+            <div class="feedback__button-wrapper">
+              <button class="feedback__button button" type="submit">Отправить отзыв</button>
+              <span class="feedback__warning-text">* — обязательные поля</span>
+            </div>
+          </form>
+        </section>
       </main>
 
       <footer class="page-footer">
@@ -93,6 +214,23 @@
           </div>
         </div>
       </footer>
+
+      <div class="failure-popup popup">
+        <div class="popup__info">
+          <p class="popup__title">Что-то пошло не так!</p>
+          <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+        <button class="failure-popup__button button" type="button">Ок</button>
+      </div>
+      <div class="success-popup popup">
+        <div class="popup__info">
+          <p class="popup__title">Ваш отзыв отправлен!</p>
+          <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="success-popup__button-wrapper">
+          <button class="success-popup__button button" type="button">Закрыть окно</button>
+        </div>
+      </div>
     </div>
     <script src="js/script.min.js"></script>
   </body>
