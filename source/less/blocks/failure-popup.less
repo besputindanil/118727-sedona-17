@@ -1,7 +1,7 @@
 .failure-popup {
   position: absolute;
   top: 1542px;
-  z-index: 1;
+  z-index: 2;
 
   display: none;
 
@@ -14,4 +14,27 @@
   width: 180px;
 
   font-size: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .failure-popup {
+    top: 1435px;
+    left: 50%;
+
+    width: 400px;
+    margin-left: -200px;
+    padding-bottom: 50px;
+  }
+
+  .failure-popup__button {
+    width: 270px;
+
+    font-size: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .failure-popup {
+    top: 1395px;
+  }
 }

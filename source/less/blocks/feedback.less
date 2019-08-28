@@ -1,5 +1,5 @@
 .feedback__header {
-  padding: 37px 20px 17px;
+  padding: 37px 20px 18px;
 
   text-align: center;
 }
@@ -67,12 +67,145 @@
   }
 }
 
-.feedback__button-wrapper {
-  display: flex;
-}
-
 .feedback__warning-text {
   display: none;
 
   line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__header {
+    padding: 71px 165px 73px;
+  }
+
+  .feedback__slogan {
+    margin-bottom: 32px;
+
+    font-size: 30px;
+  }
+
+  .feedback__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 60px;
+  }
+
+  .feedback__block-wrapper {
+    border-top: none;
+
+    &:nth-child(3) {
+      order: -1;
+
+      border-right: 1px solid #dbdbdb;
+    }
+  }
+
+  .feedback__block {
+    width: 648px;
+
+    &--name {
+      width: 267px;
+      padding-left: 56px;
+
+      text-align: left;
+    }
+
+    &--contacts {
+      margin-top: 68px;
+      margin-bottom: 54px;
+    }
+
+    &--impressions {
+      width: 324px;
+
+      text-align: left;
+    }
+  }
+
+  .feedback__block-title {
+    padding: 0;
+
+    font-size: 21px;
+
+    &--line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      &::before,
+      &::after {
+        content: "";
+
+        width: 125px;
+        height: 1px;
+
+        background-color: #dbdbdb;
+      }
+    }
+  }
+
+  .feedback__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 648px;
+  }
+
+  .feedback__button {
+    width: 324px;
+  }
+
+  .feedback__warning-text {
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__header {
+    padding: 110px 380px 55px;
+  }
+
+  .feedback__form {
+    margin: 0 120px;
+  }
+
+  .feedback__block {
+    width: 960px;
+
+    &--name {
+      width: 399px;
+      padding-left: 80px;
+    }
+
+    &--contacts {
+      margin-top: 68px;
+      margin-bottom: 54px;
+    }
+
+    &--impressions {
+      width: 480px;
+    }
+  }
+
+  .feedback__block-title {
+    &--impression {
+      padding-left: 80px;
+    }
+
+    &--line {
+      &::before,
+      &::after {
+        width: 280px;
+      }
+    }
+  }
+
+  .feedback__button-wrapper {
+    width: 960px;
+  }
+
+  .feedback__button {
+    width: 480px;
+  }
 }

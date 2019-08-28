@@ -1,7 +1,7 @@
 .popup {
   text-align: center;
 
-  box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .popup__info {
@@ -22,4 +22,23 @@
   margin: 0;
 
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .popup__info {
+    &--failure {
+      padding: 50px 50px 30px;
+    }
+
+    &--success {
+      padding: 50px 110px 20px;
+    }
+  }
+
+  .popup__title {
+    padding: 0 40px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

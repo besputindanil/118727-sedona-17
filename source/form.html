@@ -56,7 +56,7 @@
           </div>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="feedback__block-wrapper">
-              <fieldset class="feedback__block">
+              <fieldset class="feedback__block feedback__block--name">
                 <legend class="feedback__block-title">Представьтесь:</legend>
                 <div class="user-name">
                   <div class="user-name__item">
@@ -75,11 +75,12 @@
               </fieldset>
             </div>
             <div class="feedback__block-wrapper">
-              <fieldset class="feedback__block">
-                <legend class="feedback__block-title">Контактная информация:</legend>
+              <fieldset class="feedback__block feedback__block--contacts">
+                <legend class="feedback__block-title feedback__block-title--line">Контактная информация:</legend>
                 <div class="user-contacts">
                   <div class="user-contacts__item">
-                    <label class="user-contacts__title" for="phone">Контактный телефон*:</label>
+                    <label class="user-contacts__title" for="phone">
+                      <span class="user-contacts__hidden-text">Контактный</span> телефон*:</label>
                     <div class="user-contacts__text-wrapper user-contacts__text-wrapper--phone">
                       <input class="user-contacts__text" type="tel" id="phone" placeholder="Введите телефон" required>
                     </div>
@@ -94,24 +95,24 @@
               </fieldset>
             </div>
             <div class="feedback__block-wrapper">
-              <fieldset class="feedback__block">
-                <legend class="feedback__block-title">Ваше общее впечатление:</legend>
+              <fieldset class="feedback__block feedback__block--impressions">
+                <legend class="feedback__block-title feedback__block-title--impression">Ваше общее впечатление:</legend>
                 <ul class="user-impressions">
-                  <li>
+                  <li class="user-impressions__item">
                     <label class="user-impressions__radio">
                       <input type="radio" name="impression" class="user-impressions__input" checked>
                       <span class="user-impressions__radio-indicator"></span>
                       Скорее положительное
                     </label>
                   </li>
-                  <li>
+                  <li class="user-impressions__item">
                     <label class="user-impressions__radio">
                       <input type="radio" name="impression" class="user-impressions__input">
                       <span class="user-impressions__radio-indicator"></span>
                       Скорее отрицательное
                     </label>
                   </li>
-                  <li>
+                  <li class="user-impressions__item">
                     <label class="user-impressions__radio">
                       <input type="radio" name="impression" class="user-impressions__input">
                       <span class="user-impressions__radio-indicator"></span>
@@ -122,31 +123,31 @@
               </fieldset>
             </div>
             <div class="feedback__block-wrapper">
-              <fieldset class="feedback__block">
-                <legend class="feedback__block-title">Посещенные достопримечательности</legend>
+              <fieldset class="feedback__block feedback__block--visits">
+                <legend class="feedback__block-title feedback__block-title--line">Посещенные достопримечательности:</legend>
                 <ul class="user-visits">
-                  <li>
+                  <li class="user-visits__item">
                     <label class="user-visits__checkbox">
                       <input type="checkbox" class="user-visits__input" checked>
                       <span class="user-visits__checkbox-indicator"></span>
                       Мост дьявола
                     </label>
                   </li>
-                  <li>
+                  <li class="user-visits__item">
                     <label class="user-visits__checkbox">
                       <input type="checkbox" class="user-visits__input" checked>
                       <span class="user-visits__checkbox-indicator"></span>
                       Гора-колокол
                     </label>
                   </li>
-                  <li>
+                  <li class="user-visits__item">
                     <label class="user-visits__checkbox">
                       <input type="checkbox" class="user-visits__input" checked>
                       <span class="user-visits__checkbox-indicator"></span>
                       Слайд-парк
                     </label>
                   </li>
-                  <li>
+                  <li class="user-visits__item">
                     <label class="user-visits__checkbox">
                       <input type="checkbox" class="user-visits__input">
                       <span class="user-visits__checkbox-indicator"></span>
@@ -157,8 +158,8 @@
               </fieldset>
             </div>
             <div class="feedback__block-wrapper">
-              <fieldset class="feedback__block">
-                <legend class="feedback__block-title">Опишите свои эмоции</legend>
+              <fieldset class="feedback__block feedback__block--emotions">
+                <legend class="feedback__block-title feedback__block-title--line">Опишите свои эмоции:</legend>
                 <textarea class="user-emotions__text" rows="5" cols="80" placeholder="Опишите подробно все свои восторги "></textarea>
               </fieldset>
             </div>
@@ -216,14 +217,14 @@
       </footer>
 
       <div class="failure-popup popup">
-        <div class="popup__info">
+        <div class="popup__info popup__info--failure">
           <p class="popup__title">Что-то пошло не так!</p>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <button class="failure-popup__button button" type="button">Ок</button>
       </div>
       <div class="success-popup popup">
-        <div class="popup__info">
+        <div class="popup__info popup__info--success">
           <p class="popup__title">Ваш отзыв отправлен!</p>
           <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
