@@ -55,6 +55,8 @@
 
   background-color: #ffffff;
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .video__buttons {
@@ -95,5 +97,97 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .video__info {
+    margin: 0 60px;
+    padding: 68px 105px 73px;
+    border-top: none;
+  }
+
+  .video__question {
+    margin-bottom: 30px;
+
+    font-size: 30px;
+  }
+
+  .video__content {
+    margin: 0 60px;
+  }
+
+  .video__picture {
+    height: 499px;
+  }
+
+  .video__panel {
+    position: relative;
+    margin: 0;
+    margin-top: -93px;
+  }
+
+  .video__control {
+    padding: 45px 166px 45px 93px;
+  }
+
+  .video__scale {
+    width: 389px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .video__toggle {
+    top: 42px;
+    left: 206px;
+  }
+
+  .video__buttons {
+    height: 0;
+  }
+
+  .video__icon {
+    fill: #ffffff;
+
+    &--replay {
+      top: -57px;
+      left: 35px;
+    }
+
+    &--subtitles {
+      top: -56px;
+      right: 92px;
+
+    }
+
+    &--fullscreen {
+      top: -56px;
+      right: 28px;
+    }
+
+    &:hover {
+      fill: #ffffff;
+
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__info {
+    margin: 0 200px;
+    padding: 70px 190px;
+  }
+
+  .video__question {
+    margin-bottom: 33px;
+  }
+
+  .video__content {
+    margin: 0 200px;
   }
 }
