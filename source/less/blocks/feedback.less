@@ -1,16 +1,16 @@
 .feedback {
-  margin-bottom: 45px;
+  margin-bottom: 38px;
 }
 
 .feedback__header {
-  padding: 37px 20px 18px;
+  padding: 38px 20px 16px;
 
   text-align: center;
 }
 
 .feedback__slogan {
   display: block;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 
   font-size: 18px;
   line-height: 26px;
@@ -79,11 +79,11 @@
 
 @media (min-width: @tablet-width) {
   .feedback {
-    margin-bottom: 70px;
+    margin-bottom: 63px;
   }
 
   .feedback__header {
-    padding: 71px 165px 73px;
+    padding: 73px 165px;
   }
 
   .feedback__slogan {
@@ -131,24 +131,35 @@
   }
 
   .feedback__block-title {
+    position: relative;
+
     padding: 0;
 
     font-size: 21px;
 
     &--line {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       width: 100%;
+      padding: 0 125px;
 
       &::before,
       &::after {
         content: "";
 
+        position: absolute;
+        top: 50%;
+
         width: 125px;
         height: 1px;
 
         background-color: #dbdbdb;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
       }
     }
   }
@@ -170,8 +181,12 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedback {
+    margin-bottom: 67px;
+  }
+
   .feedback__header {
-    padding: 110px 380px 55px;
+    padding: 111px 380px 58px;
   }
 
   .feedback__form {
@@ -187,8 +202,8 @@
     }
 
     &--contacts {
-      margin-top: 68px;
-      margin-bottom: 54px;
+      margin-top: 65px;
+      margin-bottom: 52px;
     }
 
     &--impressions {
@@ -202,6 +217,8 @@
     }
 
     &--line {
+      padding: 0 280px;
+
       &::before,
       &::after {
         width: 280px;
