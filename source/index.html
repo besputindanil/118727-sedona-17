@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -52,14 +54,14 @@
         <section class="advantages">
           <header class="advantages__header">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <b class="advantages__slogan">Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
+            <b class="advantages__slogan">Седона – небольшой городок в Аризоне, заслуживающий большего!</b>
             <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
           </header>
           <div class="advantages__list">
             <div class="advantages__item advantages__item--extended">
               <div class="advantages__text advantages__text--triangle">
                 <h3 class="advantages__title advantages__title--white">Настоящий городок</h3>
-                <span class="advantages__number">- №1 -</span>
+                <span class="advantages__number">– №1 –</span>
                 <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
               <p class="advantages__picture">
@@ -76,21 +78,21 @@
             </div>
             <ul class="offers-list">
               <li class="offers-list__item offers-list__item--house">
-                <svg class="offers-list__icon" width="39" height="39">
+                <svg class="offers-list__icon" width="75" height="72">
                   <use xlink:href="#icon-house"></use>
                 </svg>
                 <b class="offers-list__title">Жилье</b>
                 <p class="offers-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="offers-list__item offers-list__item--burger">
-                <svg class="offers-list__icon" width="39" height="39">
+                <svg class="offers-list__icon" width="76" height="69">
                   <use xlink:href="#icon-burger"></use>
                 </svg>
                 <b class="offers-list__title">Еда</b>
                 <p class="offers-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="offers-list__item offers-list__item--gift">
-                <svg class="offers-list__icon" width="39" height="39">
+                <svg class="offers-list__icon" width="63" height="75">
                   <use xlink:href="#icon-gift"></use>
                 </svg>
                 <b class="offers-list__title">Сувениры</b>
@@ -100,7 +102,7 @@
             <div class="advantages__item advantages__item--extended">
               <div class="advantages__text">
                 <h3 class="advantages__title advantages__title--white">Там есть мост дьявола</h3>
-                <span class="advantages__number">- №2 -</span>
+                <span class="advantages__number">– №2 –</span>
                 <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <p class="advantages__picture advantages__picture--left">
@@ -115,29 +117,46 @@
                 </picture>
               </p>
             </div>
-            <div class="advantages__wrapper">
-              <div class="advantages__item advantages__item--short">
-                <div class="advantages__text advantages__text--gray">
-                  <h3 class="advantages__title">Небольшая площадь</h3>
-                  <span class="advantages__number">- №3 -</span>
-                  <p class="advantages__description">Все интересные места находятся очень близко</p>
-                </div>
+            <div class="advantages__item advantages__item--short">
+              <div class="advantages__text advantages__text--gray">
+                <h3 class="advantages__title">Небольшая площадь</h3>
+                <span class="advantages__number">– №3 –</span>
+                <p class="advantages__description">Все интересные места находятся очень близко</p>
               </div>
-              <div class="advantages__item advantages__item--short">
-                <div class="advantages__text advantages__text--gray">
-                  <h3 class="advantages__title">Красивая дорога</h3>
-                  <span class="advantages__number">- №4 -</span>
-                  <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-                </div>
+              <div class="advantages__text advantages__text--gray">
+                <h3 class="advantages__title">Красивая дорога</h3>
+                <span class="advantages__number">– №4 –</span>
+                <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
-              <div class="advantages__item advantages__item--short">
-                <div class="advantages__text advantages__text--gray">
-                  <h3 class="advantages__title">Мало туристов</h3>
-                  <span class="advantages__number">- №5 -</span>
-                  <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
-                </div>
+              <div class="advantages__text advantages__text--gray">
+                <h3 class="advantages__title">Мало туристов</h3>
+                <span class="advantages__number">– №5 –</span>
+                <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="hotel">
+          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+          <div class="hotel__info">
+            <b class="hotel__title">Заинтересовались?</b>
+            <p class="hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <a class="hotel__button button "href="#">Найти гостиницу</a>
+          </div>
+          <div class="hotel__map">
+            <iframe class="hotel__map-link" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.18050597228!2d-111.83015797418973!3d34.8543733810389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1567181860961!5m2!1sru!2sru" width="320" height="350" allowfullscreen></iframe>
+            <p class="hotel__map-picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+                <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Седона на карте">
+              </picture>
+
+            </p>
           </div>
         </section>
       </main>

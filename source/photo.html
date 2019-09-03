@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -121,7 +123,7 @@
                   </picture>
                 </a>
               </p>
-              <div class="photo__info">
+              <div class="photo__info photo__info--road">
                 <div class="photo__text">
                   <h2 class="photo__title">Дорога на север</h2>
                   <p class="photo__author">Автор фото: Петр</p>
@@ -162,6 +164,45 @@
               </div>
             </li>
           </ul>
+        </section>
+        <section class="video">
+          <h2 class="visually-hidden">Видео</h2>
+          <div class="video__info">
+            <b class="video__title">Все еще сомневаетесь?</b>
+            <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          </div>
+          <div class="video__content">
+            <div class="video__picture">
+              <a href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                  <img class="video__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видеопрезентация">
+                </picture>
+              </a>
+            </div>
+            <div class="video__panel">
+              <div class="video__control">
+                <div class="video__scale"></div>
+                <div class="video__toggle"></div>
+              </div>
+              <div class="video__buttons">
+                <svg class="video__icon video__icon--replay" width="16" height="20">
+                  <use xlink:href="#icon-video-replay"></use>
+                </svg>
+                <svg class="video__icon video__icon--subtitles" width="32" height="20">
+                  <use xlink:href="#icon-video-subtitles"></use>
+                </svg>
+                <svg class="video__icon video__icon--fullscreen" width="20" height="20">
+                  <use xlink:href="#icon-video-fullscreen"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 

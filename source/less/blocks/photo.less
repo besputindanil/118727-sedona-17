@@ -16,7 +16,6 @@
 
 .photo__item {
   padding-top: 22px;
-  padding-bottom: 18px;
 
   border-top: 1px solid #e5e5e5;
 }
@@ -28,6 +27,7 @@
 
 .photo__info {
   padding-top: 15px;
+  padding-bottom: 18px;
 }
 
 .photo__title {
@@ -80,7 +80,6 @@
   .photo__item {
     width: 324px;
     padding-top: 0;
-    padding-bottom: 17px;
 
     border-top: none;
 
@@ -100,6 +99,13 @@
   .photo__info {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 17px;
+
+    background-color: #f2f2f2;
+
+    &--road {
+      background-color: #eaeaea;
+    }
   }
 
   .photo__text {
@@ -147,8 +153,9 @@
     bottom: 0;
 
     width: 100%;
-    min-height: 61px;
+    min-height: 65px;
     padding-top: 15px;
+    padding-bottom: 0;
 
     background-color: rgba(0, 0, 0, 0.3);
   }
@@ -160,7 +167,7 @@
   }
 
   .photo__icon {
-    bottom: 28px;
+    bottom: 32px;
 
     opacity: 1;
 
