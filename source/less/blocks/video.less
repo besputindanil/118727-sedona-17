@@ -3,8 +3,7 @@
 }
 
 .video__info {
-  margin: 0 20px;
-  padding: 32px 20px 34px;
+  padding: 32px 40px 34px;
 
   text-align: center;
 
@@ -35,7 +34,7 @@
   margin-top: -45px;
 }
 
-.video__control {
+.video__timeline {
   position: relative;
 
   padding: 22px 22px 20px;
@@ -46,71 +45,82 @@
 .video__scale {
   width: 235px;
   height: 3px;
+
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.video__toggle {
+.video__slider {
   position: absolute;
   top: 19px;
   left: 58px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.video__marker {
+  display: block;
 
   width: 9px;
   height: 9px;
 
   background-color: #ffffff;
   border-radius: 50%;
-
-  cursor: pointer;
 }
 
-.video__buttons {
-  position: relative;
-
-  height: 66px;
+.video__control {
+  display: flex;
+  padding: 23px;
 
   background-color: #f2f2f2;
 }
 
-.video__icon {
-  position: absolute;
+.video__button {
+  padding: 0;
 
-  width: 32px;
-  height: 32px;
-
-  fill: #5c6870;
+  background-color: transparent;
+  border: none;
+  outline: none;
 
   &--replay {
-    top: 22px;
-    left: 25px;
+    width: 16px;
+    margin-right: 133px;
   }
 
   &--subtitles {
-    top: 24px;
-    right: 73px;
+    width: 32px;
   }
 
   &--fullscreen {
-    top: 24px;
-    right: 10px;
+    width: 20px;
+    margin-left: auto;
   }
 
-  &:hover {
+  &:hover .video__icon {
     fill: #333333;
   }
 
-  &:active {
+  &:active .video__icon {
     opacity: 0.3;
   }
 }
 
+.video__icon {
+  fill: #5c6870;
+}
+
 @media (min-width: @tablet-width) {
   .video {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
   }
 
   .video__info {
     margin: 0 60px;
     padding: 68px 105px 73px;
+
     border-top: none;
   }
 
@@ -131,61 +141,58 @@
   .video__panel {
     position: relative;
     margin: 0;
-    margin-top: -93px;
+    margin-top: -92px;
   }
 
-  .video__control {
-    padding: 45px 166px 45px 93px;
+  .video__timeline {
+    padding: 0;
   }
 
   .video__scale {
+    position: absolute;
+    top: 45px;
+    left: 93px;
+
     width: 389px;
     height: 3px;
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .video__toggle {
+  .video__slider {
     top: 42px;
     left: 206px;
   }
 
-  .video__buttons {
-    height: 0;
+  .video__control {
+    padding: 35px 41px 35px 35px;
+
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
-  .video__icon {
-    fill: #ffffff;
-
+  .video__button {
     &--replay {
-      top: -57px;
-      left: 35px;
+      margin-right: 473px;
     }
 
-    &--subtitles {
-      top: -56px;
-      right: 92px;
-    }
-
-    &--fullscreen {
-      top: -56px;
-      right: 28px;
-    }
-
-    &:hover {
+    &:hover .video__icon {
       fill: #ffffff;
 
       opacity: 0.6;
     }
 
-    &:active {
+    &:active .video__icon {
       opacity: 0.3;
     }
+  }
+
+  .video__icon {
+    fill: #ffffff;
   }
 }
 
 @media (min-width: @desktop-width) {
   .video {
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 
   .video__info {
@@ -203,5 +210,9 @@
 
   .video__scale {
     width: 539px;
+  }
+
+  .video__button--replay {
+    margin-right: 623px;
   }
 }
